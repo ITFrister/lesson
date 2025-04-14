@@ -5,7 +5,6 @@
     android:id="@+id/main"
 
     android:orientation="vertical"
-    android:gravity="center_horizontal"
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,31 +14,63 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/yourimageshere"
-        android:scaleType="centerInside"
+        android:src="@drawable/outline_3p_24"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         android:layout_marginHorizontal="64dp" />
 
+    <TextView
+        android:id="@+id/resetPasswordText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Сбросить пароль"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/newPasswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Новый пароль"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        app:drawableStartCompat="@drawable/outline_lock_24"
+        android:drawablePadding="4dp" />
+
     <EditText
-        android:id="@+id/stepEditText"
+        android:id="@+id/newPasswordEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
-        android:inputType="number" />
+        android:inputType="textPassword"/>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/confirmPasswordText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1"
+        android:text="Подтвердить пароль"
+        android:textSize="16sp"
         android:layout_marginTop="16dp"
-        android:layout_gravity="center_horizontal"
-        app:drawableStartCompat="@drawable/ic_launcher_background" />
+        android:layout_marginStart="32dp"
+        app:drawableStartCompat="@drawable/outline_lock_24"
+        android:drawablePadding="4dp"/>
+
+    <EditText
+        android:id="@+id/confirmPasswordEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/countButton"
+        android:id="@+id/submitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+1"
-        android:layout_marginTop="16dp"/>
+        android:text="представлять на рассмотрение"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp" />
 
 </LinearLayout>
